@@ -1,0 +1,48 @@
+<html>
+    <head>
+        <img src="images/bg.jpg" id="bg" alt="">
+        <title>SnakeTown</title>
+        <link rel="stylesheet" href="style.css">
+        <script>
+        const copyToClipboard = str => {
+            const el = document.createElement('textarea');
+            el.value = str;
+            el.setAttribute('readonly', '');
+            el.style.position = 'absolute';
+            el.style.left = '-9999px';
+            document.body.appendChild(el);
+            el.select();
+            document.execCommand('copy');
+            document.body.removeChild(el);
+          };
+          </script>
+          <script>
+            function changeText(button, text, textToChangeBackTo) {
+              buttonId = document.getElementById(button);
+              buttonId.textContent = text;
+              setTimeout(function() { back(buttonId, textToChangeBackTo); }, 5000);
+              function back(button, textToChangeBackTo){ button.textContent = textToChangeBackTo; }
+            }
+            </script>
+    </head>
+    <body>
+        <div class="container">
+            <div class="vertical-menu">
+                <ul>
+                    <li><a href="https://snaketown.tebex.io/" class="button">Store</a></li>
+                    <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSecDhewR1epSk9-dygHUSQTW0211ESuORDhw_O9lcsEQvO43g/viewform?vc=0&c=0&w=1&flr=0&gxids=7757" class="button">Ban Appeal</a></li>
+                    <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSeO74uaghXkDH8bWooxuQo-_mrLBlgDOOPeg04fDLJjmJXK3w/viewform?vc=0&c=0&w=1&flr=0&gxids=7757" class="button">Staff Application</a></li>
+                </ul>
+                <div class="ip">
+                    <button class="button button5" onclick="changeText('IP: play.snaketown.org', 'Copied', 'IP: play.snaketown.org'); copyToClipboard('play.snaketown.org');">IP: play.snaketown.org</button>
+                </div>
+            </div>
+            <div a class="centertext">
+                <h1 style="text-align: center;">‎‎‎‏‏‎‏‏‎<strong>SNAKETOWN</strong></h1>
+            </div>
+            <div class="widget">
+                <iframe src="https://discordapp.com/widget?id=753106247754055700&theme=dark" width="250" height="450" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+            </div>
+        </div>
+    </body>
+</html>
